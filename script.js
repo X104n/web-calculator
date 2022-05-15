@@ -10,6 +10,7 @@ class Calculator{
         this.currentOperand = ''
         this.previousOperand = ''
         this.operation = undefined
+        this.previousOperandTextElement.innerText = ''
     }
 
     delete(){
@@ -79,7 +80,7 @@ class Calculator{
         this.currentOperandTextElement.innerText = this.getDisplayNumber(this.currentOperand)
         if(this.operation != null){
             this.previousOperandTextElement.innerText =
-                `${this.getDisplayNumber(this.currentOperand)} ${this.operation}`
+                `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
         }
 
     }
